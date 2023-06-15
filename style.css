@@ -144,6 +144,10 @@ input {
     cursor: pointer;
 }
 
+.hamburger {
+    display: none;
+}
+
 .hamburger span{
     display: block;
     width: 100%;
@@ -365,6 +369,7 @@ input {
 .menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
     width: 48%;
     padding: 24px;
@@ -873,45 +878,74 @@ input {
     .mune {
         width:215px;
     }
+    .hamburger {
+        display: flex;
+    }
+    .menu__price{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 576px) {
   .menu {
     flex-basis: 100%;
   }
+  
 }
 @media (max-width: 480px) {
-    .header {
-      flex-direction: column;
-      height: 100px;
+    header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
-  
-    .nav-main__list {
-      flex-direction: column;
-      align-items: flex-start;
+    .container-header{
+        justify-content: space-between;
+        width: 100%;
     }
-  
+    .nav-main__list{
+        display: none;
+    }
     .nav-main__item {
-      margin-right: 0;
-      margin-bottom: 10px;
+        margin-right: 10px;
     }
-  
+
     .nav-main__link {
-      font-size: 16px;
+        font-size: 14px;
     }
-    .features__item_dark {
-      font-size: 20px;
+    .features {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features__item {
+        margin-bottom: 20px;
     }
     .popular {
-      flex-basis: 100%;
-      max-width: none;
-    }
-  
-    .popular-wrap {
-      gap: 15px;
+        flex-basis: calc(50% - 20px);
     }
     .menu-wrap {
-      grid-template-columns: 1fr;
-      gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
     }
+    .menu {
+        flex-basis:100%;
+    }
+
+
+    .hamburger {
+        display: flex;
+    }
+    .add-to-cart {
+        width: 50%;
+        height:auto;
+    }
+    .reservation {
+        width:300px;
+    }
+    .menu__title {
+     font-size:17px;   
+    }
+    .menu__price {
+        font-size:17px;
+    }
+
   }
