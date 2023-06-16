@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&family=Urbanist:wght@500;600&display=swap');
 
@@ -604,6 +605,7 @@ input {
   .buy-button:hover {
     background-color: #45a049;
   }
+  
     </style>
 </head>
 <body>
@@ -624,19 +626,28 @@ input {
                         <li class="nav-main__item">
                             <a class="nav-main__link" href="index.html#section-reservation">Бронирование</a>
                         </li>
+                        <ul class="nav-sublist">
+                            <li class="nav-main__item">
+                                <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
+                            </li>
+                            <li class="nav-main__item">
+                                <a class="nav-main__link" href="contact.html">Контакты</a>
+                            </li>
+                        </ul>
                     </ul>
-                    <ul class="nav-main__list">
-                        <li class="nav-main__item">
-                            <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
-                        </li>
-                        <li class="nav-main__item">
-                            <a class="nav-main__link" href="contact.html">Контакты</a>
-                        </li>
-                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                 </nav>
                 <div class="header-action">
                     <button class="header-action__search material-icons-outlined">search</button>
-                    <button class="header-action__cart material-icons-outlined" id="cartButton">local_mall</button>
+                    <button class="header-action__cart material-icons-outlined" id="cartButton" data-quantity="0">
+                        <span class="item-count">0</span>
+                        local_mall
+                      </button>                      
                 </div>
             </div>
         </div>
@@ -644,6 +655,7 @@ input {
         <ul id="cartItems"></ul>
         <button class="buy-button" id="buyButton" style="display: none;">Купить</button>
         <p id="emptyCartMessage" style="display: none;">Ваша корзина пуста</p>
+        <script src="script.js"></script>
     <script>
    const cartItemsList = document.getElementById('cartItems');
   const emptyCartMessage = document.getElementById('emptyCartMessage');
