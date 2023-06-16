@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="style.css">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&family=Urbanist:wght@500;600&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&family=Urbanist:wght@500;600&display=swap');
 
 * {
     margin: 0;
@@ -569,7 +570,7 @@ input {
                             <a class="nav-main__link nav-main__link_selected" href="index.html">Главная</a>
                         </li>
                         <li class="nav-main__item">
-                            <a class="nav-main__link" href="#">О нас</a>
+                            <a class="nav-main__link" href="onas.html">О нас</a>
                         </li>
                         <li class="nav-main__item">
                             <a class="nav-main__link" href="index.html#menu-section">Виды</a>
@@ -577,37 +578,54 @@ input {
                         <li class="nav-main__item">
                             <a class="nav-main__link" href="index.html#section-reservation">Бронирование</a>
                         </li>
+                        <ul class="nav-sublist">
+                            <li class="nav-main__item">
+                                <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
+                            </li>
+                            <li class="nav-main__item">
+                                <a class="nav-main__link" href="contact.html">Контакты</a>
+                            </li>
+                        </ul>
                     </ul>
-                    <ul class="nav-main__list">
-                        <li class="nav-main__item">
-                            <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
-                        </li>
-                        <li class="nav-main__item">
-                            <a class="nav-main__link" href="contact.html">Контакты</a>
-                        </li>
-                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                 </nav>
                 <div class="header-action">
                     <button class="header-action__search material-icons-outlined">search</button>
-                    <button class="header-action__cart material-icons-outlined">local_mall</button>
+                    <button class="header-action__cart material-icons-outlined" id="cartButton" data-quantity="0">
+                        <span class="item-count">0</span>
+                        local_mall
+                      </button>                      
                 </div>
             </div>
         </div>
     </header>
-    <section id="about-section">
+
+    <section id="contact-section" class="section-main">
         <div class="container">
-            <h1>О нас</h1>
-            <p>Мы являемся специализированным магазином по продаже птиц-кур. Наша команда из опытных специалистов занимается разведением и выращиванием кур разных пород.</p>
-            <p>У нас вы можете найти курей разных возрастов. Мы предлагаем только здоровых и качественных птиц, которые проходят все необходимые ветеринарные проверки.</p>
-            <p>Нашей целью является предоставление клиентам самых лучших птиц-кур для их домашних птичников или коммерческого использования.</p>
-            <p>Если у вас есть вопросы или вам нужна консультация по выбору кур, не стесняйтесь обращаться к нам. Мы с удовольствием поможем вам сделать правильный выбор.</p>
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-details">
+                <div class="contact-card">
+                    <h3 class="contact-card__title">Адрес</h3>
+                    <p class="contact-card__info">Апрельская 1, Костанай, Казахстан</p>
+                </div>
+                <div class="contact-card">
+                    <h3 class="contact-card__title">Телефон</h3>
+                    <p class="contact-card__info">+7 777 4466 500</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer id="footer-section">
         <div class="container">
-            <p>&copy; 2023 Все права защищены. Магазин птиц-кур</p>
+            <p class="footer-text">Все права защищены &copy; 2023</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
