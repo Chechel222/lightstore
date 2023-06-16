@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="style.css">
     <style>
                 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&family=Urbanist:wght@500;600&display=swap');
 
@@ -566,10 +567,10 @@ input {
                 <nav class="nav-main">
                     <ul class="nav-main__list">
                         <li class="nav-main__item">
-                            <a class="nav-main__link" href="index.html">Главная</a>
+                            <a class="nav-main__link nav-main__link_selected" href="index.html">Главная</a>
                         </li>
                         <li class="nav-main__item">
-                            <a class="nav-main__link nav-main__link_selected" href="onas.html">О нас</a>
+                            <a class="nav-main__link" href="onas.html">О нас</a>
                         </li>
                         <li class="nav-main__item">
                             <a class="nav-main__link" href="index.html#menu-section">Виды</a>
@@ -577,19 +578,28 @@ input {
                         <li class="nav-main__item">
                             <a class="nav-main__link" href="index.html#section-reservation">Бронирование</a>
                         </li>
+                        <ul class="nav-sublist">
+                            <li class="nav-main__item">
+                                <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
+                            </li>
+                            <li class="nav-main__item">
+                                <a class="nav-main__link" href="contact.html">Контакты</a>
+                            </li>
+                        </ul>
                     </ul>
-                    <ul class="nav-main__list">
-                        <li class="nav-main__item">
-                            <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
-                        </li>
-                        <li class="nav-main__item">
-                            <a class="nav-main__link" href="#">Контакты</a>
-                        </li>
-                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                 </nav>
                 <div class="header-action">
                     <button class="header-action__search material-icons-outlined">search</button>
-                    <button class="header-action__cart material-icons-outlined">local_mall</button>
+                    <button class="header-action__cart material-icons-outlined" id="cartButton" data-quantity="0">
+                        <span class="item-count">0</span>
+                        local_mall
+                      </button>                      
                 </div>
             </div>
         </div>
@@ -620,5 +630,6 @@ input {
             <p class="footer-text">Все права защищены &copy; 2023</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
