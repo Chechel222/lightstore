@@ -61,3 +61,24 @@ hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle('hamburger_active');
     menu.classList.toggle('menu_active');
 })
+const chiken = document.querySelector('#chiken')
+const date = document.querySelector('#date')
+const time = document.querySelector('#time')
+const name = document.querySelector('#name')
+const email = document.querySelector('#email')
+const phonenumber = document.querySelector('#phone-number')
+const submitbooking = document.querySelector('#submit-booking')
+submitbooking.addEventListener("click",() => {
+    const bookingInput = {
+        chiken: chiken.value,
+        date: date.value,
+        time: time.value,
+        name: name.value,
+        email: email.value,
+        phonenumber: phonenumber.value,
+    }
+    fetch("http://localhost:8080/booking",{
+        method:"POST",
+        body:JSON.stringify(bookingInput)
+    })
+})

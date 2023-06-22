@@ -802,6 +802,50 @@ input {
   cursor: pointer;
 }
 
+.success-message,
+.error-message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.success-message {
+  color: #4CAF50;
+  animation-name: fade-in;
+}
+
+.error-message {
+  color: #f44336;
+  animation-name: fade-in;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .success-message,
+  .error-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
 /* Медиа-запросы для адаптивности */
 
 

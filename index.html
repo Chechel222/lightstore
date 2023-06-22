@@ -29,9 +29,6 @@
                         </li>
                         <ul class="nav-sublist">
                             <li class="nav-main__item">
-                                <a class="nav-main__link" href="index.html#menu-section">Птицы</a>
-                            </li>
-                            <li class="nav-main__item">
                                 <a class="nav-main__link" href="contact.html">Контакты</a>
                             </li>
                             <li class="nav-main__item">
@@ -197,12 +194,15 @@
                     <div class="reservation-map"></div>
                     <form class="reservation">
                         <h3 class="reservation__subtitle section-subtitle">Бронирование</h3>
-                        <input class="reservation__input" type="text" value="4 бройлера">
-                        <input class="reservation__input" type="text" value="12.25, 2023">
-                        <input class="reservation__input" type="text" value="11:00">
-                        <a href="#myModal" class="trigger-btn" data-toggle="modal">
-                        <button class="reservation__btn btn-primary">Забронировать птицу</button>
-                        </a>
+                        <input class="reservation__input" type="text" id="chiken" name="chiken" value="4 бройлера">
+                        <input class="reservation__input" type="text" id="date" name="date"  value="12.25, 2023">
+                        <input class="reservation__input" type="text" id="time" name="time" value="11:00">
+                        <input class="reservation__input" type="name" id="name" name="name" required value="Имя">
+                        <input class="reservation__input" type="email" id="email" name="email" required value="email">
+                        <input class="reservation__input" type="phonenumber" id="phone-number" name="phone-number" required value="Номер телефона">
+                        <input class="reservation__input" type="submit" class="reservation__btn btn-primary submit-booking" id="submit-booking" value="Забронировать">
+                        <p class="success-message" id="success-msg" style="display: none;">Бронирование успешно отправлено!</p>
+                        <p class="error-message" id="error-msg" style="display: none;">Ошибка при отправке бронирования.</p>
                         
                     </form>
                 </div>
@@ -224,5 +224,21 @@
         </section>
     </main>
 <script src="script.js"></script>
+<script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault(); // Предотвращаем отправку формы
+
+      // Дополнительная обработка данных, если требуется
+
+      // Показываем сообщение об успешной отправке
+      document.getElementById("success-msg").style.display = "block";
+
+      // Очищаем поля формы
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("bird-type").selectedIndex = 0;
+      document.getElementById("booking-date").value = "";
+    });
+  </script>
 </body>
 </html>
