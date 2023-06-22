@@ -1,5 +1,4 @@
 
-   
 const cartButton = document.getElementById('cartButton');
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const itemCount = document.querySelector('.item-count');
