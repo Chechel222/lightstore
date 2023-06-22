@@ -9,14 +9,17 @@ body {
     min-height: 100vh;
 }
 input {
-    padding:3px 15px;
-    width:300px;
-    height:35px;
-    border: none;
+    width: 100%;
+    border: 1px solid #D1D1D1;
+    padding: 16px;
+    appearance: none;
+    border-radius: 6px;
     outline: none;
-    opacity: 0.8;
-    border-radius:10px;
-    text-transform: uppercase;
+    transition: border 0.2s ease;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 .container {
     display: flex;
@@ -34,10 +37,9 @@ input {
     justify-content: center;
     flex-direction: column;
     gap:10px;
-
 }
 .btn-register {
-    background-color: #0099ff;
+    background:linear-gradient(45deg, rgb(0, 132, 255),rgb(135, 238, 0));
     width:300px;
     height:40px;
     cursor: pointer;
@@ -48,7 +50,7 @@ input {
     color:white;
 }
 .btn-index {
-    background-color: rgb(98, 0, 255) ;
+    background:linear-gradient(45deg, rgb(0, 132, 255), red);
     width:150px;
     height:40px;
     cursor: pointer;

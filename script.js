@@ -77,7 +77,7 @@ submitbooking.addEventListener("click",() => {
         email: email.value,
         phonenumber: phonenumber.value,
     }
-    fetch("http://localhost:8080/booking",{
+    fetch("https://api-chiken-shop.onrender.com/booking",{
         method:"POST",
         body:JSON.stringify(bookingInput)
     })

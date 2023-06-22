@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Бронирование птицы</title>
+  <style>
+       body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 50px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .success-message,
+    .error-message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      opacity: 0;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .success-message {
+      color: #4CAF50;
+      animation-name: fade-in;
+    }
+
+    .error-message {
+      color: #f44336;
+      animation-name: fade-in;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Бронирование птицы</h1>
+  <form>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="bird-type">Вид птицы:</label>
+    <select id="bird-type" name="bird-type" required>
+      <option value="parrot">Попугай</option>
+      <option value="owl">Сова</option>
+      <option value="peacock">Павлин</option>
+      <option value="penguin">Пингвин</option>
+    </select>
+    
+    <label for="booking-date">Дата бронирования:</label>
+    <input type="date" id="booking-date" name="booking-date" required>
+    
+    <input type="submit" value="Забронировать">
+
+    <p class="success-message" id="success-msg" style="display: none;">Бронирование успешно отправлено!</p>
+    <p class="error-message" id="error-msg" style="display: none;">Ошибка при отправке бронирования.</p>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault(); // Предотвращаем отправку формы
+
+        // Дополнительная обработка данных, если требуется
+
+        // Показываем сообщение об успешной отправке
+        document.getElementById("success-msg").style.display = "block";
+
+        // Очищаем поля формы
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("bird-type").selectedIndex = 0;
+        document.getElementById("booking-date").value = "";
+      });
+    </script>
+  </form>
+</body>
+</html>
